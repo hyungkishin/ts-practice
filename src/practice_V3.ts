@@ -7,15 +7,9 @@ interface Product {
   price: number;
 }
 
-class Cart_v2 {
-  // 속성
-  user: User;
-  store: object;
+class Cart_v3 {
   // 생성자
-  constructor(user) {
-    this.user = user;
-    this.store = {};
-  }
+  constructor(public user: User, private store: object = {}) { }
   // 함수 
   put(id: string, product: Product) {
     this.store[id] = product;
@@ -25,5 +19,12 @@ class Cart_v2 {
   }
 }
 // 인스턴스 (객체) <-> Cart Class 
-const cartJohn2 = new Cart_v2({ name: 'john' });
-const cartJay2 = new Cart_v2({ name: 'jay' });
+class PromotionCart extends Cart_v3 {
+  addPromotion() {
+    this.user
+  }
+}
+const cartJohn3 = new Cart_v3({ name: 'john' });
+// cartJohn3.user
+const promj3 = new PromotionCart({ name: 'jay' });
+// promj3.user
