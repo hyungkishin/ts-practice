@@ -1,4 +1,4 @@
-class Cart {
+class Cart_v1 {
   constructor(user) {
     this.user = user;
     this.store = {};
@@ -11,5 +11,5 @@ class Cart {
   }
 }
 
-const cartJohn = new Cart({name: 'john'});
-const cartJay = new Cart({name: 'jay'});
+const cartJohn1 = new Cart_v1({ name: 'john' });
+const cartJay1 = new Cart_v1({ name: 'jay' });
