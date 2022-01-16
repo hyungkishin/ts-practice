@@ -58,4 +58,5 @@ undefined
 string
 primited Type
 null
+any
 ```
