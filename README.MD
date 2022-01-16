@@ -59,4 +59,5 @@ string
 primited Type
 null
 any
+array
 ```
