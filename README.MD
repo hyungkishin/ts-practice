@@ -50,3 +50,13 @@ cartJohn3.user // <- 인스턴스 에서도 사용 가능
 const prom3 = new PromotionCart({name: 'mymy'})
 prom3.user // 상속받은 하위 타입에서도 사용 가능
 ```
+
+### Basic Types update
+
+```
+boolean
+undefined
+string
+primited Type
+null
+```
