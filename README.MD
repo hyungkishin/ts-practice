@@ -15,7 +15,6 @@
 ```
 private 랑 protected 차이.
 es6 에서도 상속을 할 수가 있는데,
-
 하위타입 extends 상위타입 시에
 
 하위타입 {
