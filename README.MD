@@ -60,10 +60,14 @@ primited Type
 null
 any
 array
-test
-git config --global user.name hyungkiShin
-git config --global user.email tkaqkeldk@nate.com
 
-git config user.name hyungkiShin
-git config user.email tkaqkeldk@nate.com
 ```
+
+부수효과 종류
+```
+외부의 상태를 변경하거나,
+화면이나 file 의 데이터를 쓰는등의 io 작업등이 부수효과 이다.
+
+error 나 exception 을 발생시켜 실행 흐름을 바꾸는것도 부수효과의 일종이다.
+```
+
