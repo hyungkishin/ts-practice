@@ -61,4 +61,9 @@ null
 any
 array
 test
+git config --global user.name "hyungkiShin" 
+git config --global user.email "tkaqkeldk@nate.com"
+
+git config user.name "hyungkiShin" 
+git config user.email "tkaqkeldk@nate.com"
 ```
