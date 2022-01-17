@@ -60,4 +60,5 @@ primited Type
 null
 any
 array
+test
 ```
