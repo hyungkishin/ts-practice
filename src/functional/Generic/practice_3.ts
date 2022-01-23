@@ -53,31 +53,20 @@ function getPrice(name: string): number | undefined { // 문자를 입력 받으
     }
 }
 
-// V1
-//  export const isExpensive = (price: number) => {
-//     return price > 10000;
-//  }
-
-// V2
 export const isExpensive = (price: number | undefined) => {
     if (price === undefined) return false
     return price > 10000;
 }
-
-// V1
-//  export const main = () => {
-//     const price = getPrice("tomato");
-//     // getPrice 타입에 속하는 값중 isExpensive 인자의 price 부분집합에 속하는 반면 undefined 는 number 에 속하지 않음.
-//     return isExpensive(price)  // 그래서 합성이 불가능함
-//  }
-
 export const isExpensivePrice = (price: number): boolean => {
     return isExpensive(getPrice("tomato"))
 }
-// V2
+
+export const compose = <A, B, C>(g: (y: B) => C, f: (name: A) => B) => (x: A) => {
+    return g(f(x));
+}
+
+//  <A, B, C> ((B) => C, (A) => B) => (A) => C // compose 의 데이터 타입 매개변수를 (지우면 : 콜론과 매개변수만 지운형태 ) 읽기 편하다.
+
 export const main = () => {
-    // 함수를 잇는다는것은 어떤 함수의 출력을 다른함수의 입력으로 넘겨주는것을 의미하죠.
-    // 타입 스크립트가 아니였다면, 런타임 에러로 이어졌을것이고, 디버깅도 까다로워 졌을것이다.
-    // "매번" 일어나는 에러가 아니기 때문에.
     return isExpensive(getPrice("tomato"))
 } 
